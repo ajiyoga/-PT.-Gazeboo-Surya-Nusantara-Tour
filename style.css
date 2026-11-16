@@ -172,7 +172,9 @@ h2 {
 }
 
 /* Sembunyikan ruang ikon kosong jika ikon Lucide belum ter-render agar teks tepat di tengah */
-.btn i:empty {
+i[data-lucide]:empty,
+.btn i:empty,
+.f label i:empty {
   display: none;
 }
 
@@ -210,6 +212,9 @@ h2 {
 }
 
 i[data-lucide] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
   stroke-width: 2;
@@ -498,11 +503,6 @@ header {
   gap: 8px;
   line-height: 1;
   white-space: nowrap;
-}
-
-.sbox .btn i:empty,
-.f label i:empty {
-  display: none;
 }
 
 /* Tentang Kami */
